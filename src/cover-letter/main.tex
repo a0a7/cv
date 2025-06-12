@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lined Cover Letter
+% LaTeX Template
+% Version 3.0 (February 14, 2023)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	12pt, % Default font size
+]{letter}
+
+\usepackage{graphicx} % Required for including images
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage[
+	a4paper, % Paper size, use letterpaper for US letter paper
+	top=2cm, % Top margin
+	bottom=2.5cm, % Bottom margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
+	headsep=0.8cm, % Space from the top margin to the baseline of the header
+	footskip=1.2cm, % Space from the bottom margin to the baseline of the footer
+	%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{1em} % Vertical space between paragraphs
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{XCharter} % Use the XCharter fonts
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customizing headers and footers
+
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % No header rule
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\fancypagestyle{subsequentpages}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{1pt} % Header rule thickness
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
+\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	FIRST PAGE HEADER
+%----------------------------------------------------------------------------------------
+
+\vspace*{-1.25cm} % Pull logo into the top margin
+
+\hfill\includegraphics[width=0.3\textwidth]{logo.pdf} % Right-aligned logo
+
+\vspace{-0.5cm} % Pull the rule closer to the logo
+
+\rule{\linewidth}{1pt} % Horizontal rule
+
+\medskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begingroup
+	\raggedleft % Right align text
+	\small % Font size
+	Dr. John Dorian \\ % Your name
+	5384 N Broadway Ave \\ % Your address
+	Trotwood, Ohio 45426 \\
+	+1 (937) 837-1234 \\ % Your phone number
+	john@latextemplates.com\\ % Your email address
+	\bigskip % Vertical whitespace
+	{\normalsize\textit{\today}}\\ % Date
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING
+%----------------------------------------------------------------------------------------
+
+\begingroup
+	% Name and address of the person to whom the letter is being sent
+	Dr. Robert Kelso \\
+	Chief of Medicine \\
+	Sacred Heart Hospital \\
+	12629 Riverside Drive \\
+	North Hollywood, L.A. 91607
+\endgroup
+
+\bigskip % Vertical whitespace
+
+\textbf{Cover Letter for Residency Position}
+
+\medskip % Vertical whitespace
+
+Dear Dr. Kelso,
+
+\smallskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+PARAGRAPH ONE: State the reason for the letter, name the position or type of work you are applying for and identify the source from which you learned of the opening (i.e. career development center, website, employment service, personal contact).
+
+PARAGRAPH TWO: Indicate why you are interested in the position, the company, its products, services -- above all, stress what you can do for the employer. If you are a recent graduate, explain how your academic background makes you a qualified candidate for the position. If you have practical work experience, point out specific achievements or unique qualifications. Try not to repeat the same information the reader will find in the resume. Refer the reader to the enclosed resume or application which summarizes your qualifications, training, and experiences. The purpose of this section is to strengthen your resume by providing details which bring your experiences to life.
+
+PARAGRAPH THREE: Request a personal interview and indicate your flexibility as to the time and place. Repeat your phone number in the letter and offer assistance to help in a speedy response. For example, state that you will be in the city where the company is located on a certain date and would like to set up an interview. Alternatively, state that you will call on a certain date to set up an interview. End the letter by thanking the employer for taking time to consider your credentials.
+
+\smallskip % Vertical whitespace
+
+Sincerely yours,
+
+\bigskip\bigskip\bigskip % Vertical whitespace
+
+Dr. John Dorian, M.D.
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
