@@ -1,0 +1,69 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4]{russell}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
+%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
+\colorlet{russell}{russell-black}
+% Uncomment if you would like to specify your own color
+% \definecolor{russell}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with russell color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\begin{center}
+\Large{\textbf{Alexander Weimer}} \\
+\vspace{0.5em}
+\small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
+\vspace{0.8em}
+
+% LINKS ON ONE ROW
+\small{
+  \raisebox{-0.1ex}{\includesvg[width=1em]{email}}~aw@a0.ax
+  \quad
+  \href{https://a0.ax/}{\raisebox{-0.4ex}{\includesvg[width=1em]{../icon/web}}~www.a0.ax}
+  \quad
+  \href{https://github.com/a0a7}{\raisebox{-0.5ex}{\includesvg[width=1em]{../icon/github}}~@a0a7}
+  \quad
+  \href{https://linkedin.com/in/alexander-weimer}{\raisebox{-0.2em}{\includesvg[width=1em]{../icon/linkedin}}~in/alexander-weimer}
+  \quad
+  \href{https://orcid.org/0009-0008-5679-3042}{\raisebox{-0.1em}{\includesvg[width=1em]{../icon/orcid}}~0009-0008-5679-3042}
+}
+
+\vspace{0.8em}
+\end{center}
+
+    \input{experience.tex}
+    \input{education.tex}
+    \input{volunteering.tex}
+    \input{achievements.tex}
+    \input{skills.tex}
+    \input{languages.tex}
+
+  %\input{cv/activities.tex}
+
+\vspace*{\fill}
+%-------------------------------------------------------------------------------
+\end{document}
