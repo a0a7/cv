@@ -1,3 +1,2 @@
 # cv
-install instructions:
-- install TeX Live: https://www.tug.org/texlive/
+compile with lualatex or xelatex. lot of dependencies
