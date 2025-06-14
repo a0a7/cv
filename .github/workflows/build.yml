@@ -1,11 +1,20 @@
 name: Build LaTeX document
 on: [push]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -75,3 +84,47 @@ jobs:
           path: |
             ./src/cv/main.pdf
             ./src/cover-letter/main.pdf
+      
+      - name: Prepare files for GitHub Pages
+        run: |
+          mkdir -p ./public
+          cp ./src/cv/main.pdf ./public/cv.pdf
+          cp ./src/cover-letter/main.pdf ./public/cover-letter.pdf
+          echo "Files prepared for GitHub Pages:"
+          ls -la ./public/
+      
+      - name: Update README with PDF links
+        run: |
+          # Get the repository owner and name
+          REPO_OWNER="${GITHUB_REPOSITORY%/*}"
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          
+          # Define the URLs for the hosted PDFs
+          CV_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}/cv.pdf"
+          COVER_LETTER_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}/cover-letter.pdf"
+          
+          # Update README with the PDF links
+          sed -i "s|## Usage|## Downloads\n\n📄 **[Download CV (PDF)](${CV_URL})**\n\n📄 **[Download Cover Letter (PDF)](${COVER_LETTER_URL})**\n\n## Usage|" README.md
+          
+          echo "Updated README with PDF links:"
+          echo "CV URL: ${CV_URL}"
+          echo "Cover Letter URL: ${COVER_LETTER_URL}"
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          
+      - name: Commit updated README
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update README with hosted PDF links [skip ci]"
+            git push
