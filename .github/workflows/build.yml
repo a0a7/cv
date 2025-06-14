@@ -33,15 +33,23 @@ jobs:
           echo "CV data generated, checking cvdata.tex:"
           ls -la cvdata.tex
           head -5 cvdata.tex
+          cd ../../
           
           echo "Generating cover letter data..."
-          cd ../cover-letter
+          cd ./src/cover-letter
           echo "In cover letter directory: $(pwd)"
           ls -la
           python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
           echo "Cover letter data generated, checking coverletterdata.tex:"
           ls -la coverletterdata.tex
           head -5 coverletterdata.tex
+          cd ../../
+          
+          echo "Final check - listing all generated files:"
+          echo "CV directory:"
+          ls -la ./src/cv/cvdata.tex
+          echo "Cover letter directory:"
+          ls -la ./src/cover-letter/coverletterdata.tex
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
