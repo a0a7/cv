@@ -19,10 +19,29 @@ jobs:
       
       - name: Generate LaTeX data from YAML
         run: |
+          echo "Current directory: $(pwd)"
+          echo "Listing root directory:"
+          ls -la
+          echo "Checking if data.yaml exists:"
+          ls -la data.yaml || echo "data.yaml not found!"
+          
+          echo "Generating CV data..."
           cd ./src/cv
+          echo "In CV directory: $(pwd)"
+          ls -la
           python yaml_to_latex.py ../../data.yaml cv > cvdata.tex
+          echo "CV data generated, checking cvdata.tex:"
+          ls -la cvdata.tex
+          head -5 cvdata.tex
+          
+          echo "Generating cover letter data..."
           cd ../cover-letter
+          echo "In cover letter directory: $(pwd)"
+          ls -la
           python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
+          echo "Cover letter data generated, checking coverletterdata.tex:"
+          ls -la coverletterdata.tex
+          head -5 coverletterdata.tex
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
