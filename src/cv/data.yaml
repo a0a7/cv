@@ -1,0 +1,103 @@
+personal:
+  name: "Alexander Weimer"
+  title: "Electrical Engineering Student at University of Minnesota, Minnesota, USA"
+  contacts:
+    - icon: "email.png"
+      text: "aw@a0.ax"
+      url: "mailto:aw@a0.ax"
+      raise: "-0.45ex"
+    - icon: "web"
+      text: "www.a0.ax"
+      url: "https://a0.ax/"
+      raise: "-0.4ex"
+    - icon: "github"
+      text: "@a0a7"
+      url: "https://github.com/a0a7"
+      raise: "-0.5ex"
+    - icon: "linkedin"
+      text: "in/alexander-weimer"
+      url: "https://linkedin.com/in/alexander-weimer"
+      raise: "-0.2em"
+    - icon: "orcid"
+      text: "0009-0008-5679-3042"
+      url: "https://orcid.org/0009-0008-5679-3042"
+      raise: "-0.1em"
+
+experience:
+  - title: "Independent Research Lead"
+    organization: "Minnetonka Research"
+    organization_url: "https://www.linkedin.com/school/minnetonka-research/"
+    location: "Minnetonka, MN"
+    duration: "Sep 2024--Jun 2025"
+    items:
+      - "Led a yearlong project developing a machine learning model for reading Gregg shorthand."
+      - "Article: \\textbf{\\href{https://doi.org/10.31224/4661}{doi.org/10.31224/4661}}, Model Repository: \\textbf{\\href{https://doi.org/10.57967/hf/5604}{doi.org/10.57967/hf/5604}}"
+  - title: "Research Intern"
+    organization: "KTH Royal Institute of Technology"
+    organization_url: "https://www.linkedin.com/school/kth/"
+    location: "Stockholm, Sweden"
+    duration: "Jun 2023--Jul 2023"
+    items:
+      - "Led a project in Materials Engineering under the mentorship of Dr.\\ Antonio Capezza."
+      - "Presented a talk about my research at the Swedish National Museum of Science and Technology."
+
+education:
+  - institution: "University of Minnesota"
+    institution_url: "https://www.linkedin.com/school/university-of-minnesota/"
+    degree: "Bachelors of Electrical Engineering"
+    location: "Minneapolis, Minnesota"
+    duration: "2025--2028 (est.)"
+    items: []
+  - institution: "Minnetonka High School"
+    institution_url: "https://www.linkedin.com/school/minnetonka-senior-high-school/"
+    degree: "AP International Diploma | Dual Enrollment @ SCSU & Normandale Community College"
+    location: "Minnetonka, Minnesota"
+    duration: "2021--2025"
+    items:
+      - "GPA\\@: 4.4 Weighted / 3.8 Unweighted"
+      - "Activities: Speech \\& Debate (Captain), Minnetonka Research, Cultural Fair, $\\Delta E\\Phi$"
+
+volunteering:
+  - title: "Camp Lecturer, Counselor"
+    organization: "Minnetonka Community Education"
+    organization_url: "https://www.linkedin.com/company/107129508/admin/dashboard/"
+    location: "Minnetonka, MN"
+    duration: "Jun 2021--"
+    items:
+      - "Taught middle school speech/debate camps for several years. Counselor at science camp."
+
+honors:
+  - title: "Category 1st Place---Robotics & Intelligent Machines (ISEF 2nd Alternate)"
+    organization: "TCRSF"
+    date: "Mar 2025"
+  - title: "National Merit Scholar"
+    organization: "National Merit Scholarship Program"
+    date: "Apr 2025"
+  - title: "Degree of Special Distinction"
+    organization: "National Speech & Debate Honor Society"
+    date: "Nov 2024"
+  - title: "AP International Diploma"
+    organization: "College Board"
+    date: "Jul 2024"
+  - title: "National German Exam Level 4 Gold award (91st percentile)"
+    organization: "AATG"
+    date: "Mar 2024"
+  - title: "Minnesota Platinum Bilingual Seal (German & English)"
+    organization: "Minnesota Dept.\\ of Education"
+    date: "Feb 2024"
+
+skills:
+  - category: "Languages"
+    items: "Javascript/Typescript, React, Python, Java, Matlab"
+  - category: "Tooling"
+    items: "Solidworks, Git, \\LaTeX, Linux, Shell (Bash, Zsh)"
+  - category: "Soft Skills"
+    items: "Collaborative software development, public speaking, academic/professional writing"
+
+languages:
+  - language: "Swedish"
+    proficiency: "Native proficiency"
+  - language: "English"
+    proficiency: "Native proficiency"
+  - language: "German"
+    proficiency: "Professional working proficiency"

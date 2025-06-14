@@ -2,13 +2,16 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 \documentclass[11pt, letterpaper]{article}
-\usepackage[left=1.4cm, top=1.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm]{geometry}
+\usepackage[left=1.4cm, top=1.6cm, right=1.4cm, bottom=1.8cm, footskip=.5cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{fontspec}
+
+% Load CV data
+\input{cvdata.tex}
 
 \newfontfamily\titlefont{MontserratExtrabold}[
     Path = ../../static/font/,
@@ -46,27 +49,40 @@
 % Remove page numbers
 \pagestyle{empty}
 
+% Helper commands for rendering sections
+\newcommand{\experienceentry}[5]{
+  \noindent\textbf{{#1}} \hfill \textit{#4}\\
+  \href{#3}{#2} \hfill \textit{#5}
+}
+
+\newcommand{\educationentry}[5]{
+  \noindent\textbf{{\href{#3}{#1}}} \hfill \textit{#4}\\
+  #2 \hfill \textit{#5}
+}
+
+\newcommand{\honorentry}[3]{
+  \textbf{#1}, #2 \hfill \textbf{#3}\\
+}
+
 %-------------------------------------------------------------------------------
 \begin{document}
-\vspace{2em}
 \begin{center}
-\vspace{2em}
-\color{black}\huge{\titlefont\textbf{Alexander Weimer}} \\
-\vspace{0.4em}
-\small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
+\color{black}\huge{\titlefont\textbf{\cvname}} \\
 \vspace{0.5em}
+\small{\cvtitle} \\
+\vspace{1.25em}
 
-% LINKS ON ONE ROW
+% CONTACT LINKS
 \small{\textbf{
-  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email.png}}~aw@a0.ax
+  \raisebox{\contactemailraise}{\includegraphics[width=1em]{../../static/icon/\contactemailicon}}~\contactemail
   \quad
-  \href{https://a0.ax/}{\raisebox{-0.4ex}{\includegraphics[width=1em]{../../static/icon/web}}~www.a0.ax}
+  \href{\contactweburl}{\raisebox{\contactwebraise}{\includegraphics[width=1em]{../../static/icon/\contactwebicon}}~\contactweb}
   \quad
-  \href{https://github.com/a0a7}{\raisebox{-0.5ex}{\includegraphics[width=1em]{../../static/icon/github}}~@a0a7}
+  \href{\contactgithuburl}{\raisebox{\contactgithubraise}{\includegraphics[width=1em]{../../static/icon/\contactgithubicon}}~\contactgithub}
   \quad
-  \href{https://linkedin.com/in/alexander-weimer}{\raisebox{-0.2em}{\includegraphics[width=1em]{../../static/icon/linkedin}}~in/alexander-weimer}
+  \href{\contactlinkedinurl}{\raisebox{\contactlinkedinraise}{\includegraphics[width=1em]{../../static/icon/\contactlinkedinicon}}~\contactlinkedin}
   \quad
-  \href{https://orcid.org/0009-0008-5679-3042}{\raisebox{-0.1em}{\includegraphics[width=1em]{../../static/icon/orcid}}~0009-0008-5679-3042}
+  \href{\contactorcidurl}{\raisebox{\contactorcidraise}{\includegraphics[width=1em]{../../static/icon/\contactorcidicon}}~\contactorcid}
 }}
 
 \end{center}
@@ -74,77 +90,68 @@
 \vspace{-1.5em}
 \section{\Large{Experience}}
 
-\noindent\textbf{{Independent Research Lead}} \hfill \textit{Minnetonka, MN}\\
-\href{https://www.linkedin.com/school/minnetonka-research/}{Minnetonka Research} \hfill \textit{Sep 2024--Jun 2025}
+\experienceentry{\experienceoneta}{\experienceoneorg}{\experienceoneorgurl}{\experienceoneloc}{\experienceonedate}
 \begin{itemize}
-\item Led a yearlong project developing a machine learning model for reading Gregg shorthand.
-\item Article: \textbf{\href{https://doi.org/10.31224/4661}{doi.org/10.31224/4661}}, Model Repository: \textbf{\href{https://doi.org/10.57967/hf/5604}{doi.org/10.57967/hf/5604}}
+\item \experienceoneitemone
+\item \experienceoneitemtwo
 \end{itemize}
 
 \vspace{0.5em}
 
-\noindent\textbf{{Research Intern}} \hfill \textit{Stockholm, Sweden}\\
-\href{https://www.linkedin.com/school/kth/}{KTH Royal Institute of Technology} \hfill \textit{Jun 2023--Jul 2023}
+\experienceentry{\experiencetwota}{\experiencetwoorg}{\experiencetwoorgurl}{\experiencetwoloc}{\experiencetwodate}
 \begin{itemize}
-\item Led a project in Materials Engineering under the mentorship of Dr.\ Antonio Capezza.
-\item Presented a talk about my research at the Swedish National Museum of Science and Technology.
+\item \experiencetwoitemone
+\item \experiencetwoitemtwo
 \end{itemize}
 
 \vspace{-1em}
 \section{\Large{Education}}
 
-\noindent\textbf{{\href{https://www.linkedin.com/school/university-of-minnesota/}{University of Minnesota}}} \hfill \textit{Minneapolis, Minnesota}\\
-Bachelors of Electrical Engineering \hfill \textit{2025--2028 (est.)}
-%\begin{itemize}
-%\item Activities: 
-%\end{itemize}
+\educationentry{\educationoneinst}{\educationonedegree}{\educationoneinsturl}{\educationoneloc}{\educationonedate}
 
 \vspace{0.5em}
 
-\noindent\textbf{{\href{https://www.linkedin.com/school/minnetonka-senior-high-school/}{Minnetonka High School}}} \hfill \textit{Minnetonka, Minnesota}\\
-AP International Diploma | Dual Enrollment @ SCSU \& Normandale Community College \hfill \textit{2021--2025}
+\educationentry{\educationtwoinst}{\educationtwodegree}{\educationtwoinsturl}{\educationtwoloc}{\educationtwodate}
 \begin{itemize}
-\item GPA\@: 4.4 Weighted / 3.8 Unweighted
-\item Activities: Speech \& Debate (Captain), Minnetonka Research, Cultural Fair, $\Delta E\Phi$
+\item \educationtwoitemone
+\item \educationtwoitemtwo
 \end{itemize}
 
 \vspace{-1em}
 \section{\Large{Volunteering}}
 
-\noindent\textbf{{Camp Lecturer, Counselor}} \hfill \textit{Minnetonka, MN}\\
-\href{https://www.linkedin.com/company/107129508/admin/dashboard/}{Minnetonka Community Education} \hfill \textit{Jun 2021--}
+\experienceentry{\volunteeringoneta}{\volunteeringoneorg}{\volunteeringoneorgurl}{\volunteeringoneloc}{\volunteeringonedate}
 \begin{itemize}
-\item Taught middle school speech/debate camps for several years. Counselor at science camp.
+\item \volunteeringoneitemone
 \end{itemize}
 
-\vspace{-1em}
+\vspace{-1em} 
 \section{\Large{Honors/Awards}}
 
-\textbf{Category 1st Place---Robotics \& Intelligent Machines (ISEF 2nd Alternate)}, TCRSF \hfill \textbf{Mar 2025}\\
-\textbf{National Merit Scholar}, National Merit Scholarship Program \hfill \textbf{Apr 2025}\\
-\textbf{Degree of Special Distinction}, National Speech \& Debate Honor Society \hfill \textbf{Nov 2024}\\
-\textbf{AP International Diploma}, College Board \hfill \textbf{Jul 2024}\\
-\textbf{National German Exam Level 4 Gold award (91st percentile)}, AATG \hfill \textbf{Mar 2024}\\
-\textbf{Minnesota Platinum Bilingual Seal (German \& English)}, Minnesota Dept.\ of Education \hfill \textbf{Feb 2024}
+\honorentry{\honorsonetitle}{\honorsoneorg}{\honorsonedate}
+\honorentry{\honorstwotitle}{\honorstwoorg}{\honorstwodate}
+\honorentry{\honorsthreetitle}{\honorsthreeorg}{\honorsthreedate}
+\honorentry{\honorsfourtitle}{\honorsfourorg}{\honorsfourdate}
+\honorentry{\honorsfivetitle}{\honorsfiveorg}{\honorsfivedate}
+\honorentry{\honorssixtitle}{\honorssixorg}{\honorssixdate}
 
-\vspace{-1em}
+\vspace{-2.25em}
 \section{\Large{Skills}}
 
 \begin{tabular}{@{}p{2cm}p{15cm}@{}}
-\textbf{Languages} & Javascript/Typescript, React, Python, Java, Matlab\\
-\textbf{Tooling} & Solidworks, Git, \LaTeX, Linux, Shell (Bash, Zsh)\\
-\textbf{Soft Skills} & Collaborative software development, public speaking, academic/professional writing
+\textbf{\skillsonecategory} & \skillsoneitems\\
+\textbf{\skillstwocategory} & \skillstwoitems\\
+\textbf{\skillsthreecategory} & \skillsthreeitems
 \end{tabular}
 
 \vspace{-1em}
 \section{\Large{Languages}}
 
 \begin{tabular}{@{}p{2cm}p{15CM}@{}}
-\textbf{Swedish} & Native proficiency\\
-\textbf{English} & Native proficiency\\
-\textbf{German} & Professional working proficiency
+\textbf{\languagesonelang} & \languageoneprof\\
+\textbf{\languagetwolang} & \languagetwoprof\\
+\textbf{\languagethreelang} & \languagethreeprof
 \end{tabular}
 
 \vspace*{\fill}
-%-------------------------------------------------------------------------------
 \end{document}
