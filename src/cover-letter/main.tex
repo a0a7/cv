@@ -6,13 +6,16 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 
+% Load cover letter data
+\input{coverletterdata.tex}
+
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
 
 \usepackage[
 	letterpaper, % Paper size, use letterpaper for US letter paper
-	top=1.8 % Top margin
+	top=1.8cm, % Top margin
 	bottom=1.8cm, % Bottom margin
 	left=2.4cm, % Left margin
 	right=2.4cm, % Right margin
@@ -56,22 +59,22 @@
 
 \begin{center}
 \vspace{0.5em}
-\color{black}\LARGE{\textbf{Alexander Weimer}} \\
+\color{black}\LARGE{\textbf{\cvname}} \\
 \vspace{0.3em}
-\small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
+\small{\cvtitle} \\
 \vspace{0.3em}
 
 % LINKS ON ONE ROW
 \small{\textbf{
-  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email}}~aw@a0.ax
+  \raisebox{\contactemailraise}{\includegraphics[width=1em]{../../static/icon/\contactemailicon}}~\contactemail
   \quad
-  \href{https://a0.ax/}{\raisebox{-0.4ex}{\includegraphics[width=1em]{../../static/icon/web}}~www.a0.ax}
+  \href{\contactweburl}{\raisebox{\contactwebraise}{\includegraphics[width=1em]{../../static/icon/\contactwebicon}}~\contactweb}
   \quad
-  \href{https://github.com/a0a7}{\raisebox{-0.5ex}{\includegraphics[width=1em]{../../static/icon/github}}~@a0a7}
+  \href{\contactgithuburl}{\raisebox{\contactgithubraise}{\includegraphics[width=1em]{../../static/icon/\contactgithubicon}}~\contactgithub}
   \quad
-  \href{https://linkedin.com/in/alexander-weimer}{\raisebox{-0.2em}{\includegraphics[width=1em]{../../static/icon/linkedin}}~in/alexander-weimer}
+  \href{\contactlinkedinurl}{\raisebox{\contactlinkedinraise}{\includegraphics[width=1em]{../../static/icon/\contactlinkedinicon}}~\contactlinkedin}
   \quad
-  \href{https://orcid.org/0009-0008-5679-3042}{\raisebox{-0.1em}{\includegraphics[width=1em]{../../static/icon/orcid}}~0009-0008-5679-3042}
+  \href{\contactorcidurl}{\raisebox{\contactorcidraise}{\includegraphics[width=1em]{../../static/icon/\contactorcidicon}}~\contactorcid}
 }}
 \end{center}
 
@@ -87,20 +90,19 @@
 
 \begingroup
 	% Name and address of the person to whom the letter is being sent
-	Dr. Robert Kelso \\
-	Chief of Medicine \\
-	Sacred Heart Hospital \\
-	12629 Riverside Drive \\
-	North Hollywood, L.A. 91607
+	\recipientname \\
+	\recipienttitle \\
+	\recipientorg \\
+	\recipientaddress
 \endgroup
 
 \bigskip % Vertical whitespace
 
-\textbf{Cover Letter for Residency Position}
+\textbf{\coverlettersubject}
 
 \medskip % Vertical whitespace
 
-Dear Dr. Kelso,
+\coverlettergreeting
 
 \smallskip % Vertical whitespace
 
@@ -108,11 +110,11 @@ Dear Dr. Kelso,
 %	LETTER CONTENT
 %----------------------------------------------------------------------------------------
 
-PARAGRAPH ONE: State the reason for the letter, name the position or type of work you are applying for and identify the source from which you learned of the opening (i.e. career development center, website, employment service, personal contact).
+\coverletteropening
 
-PARAGRAPH TWO: Indicate why you are interested in the position, the company, its products, services -- above all, stress what you can do for the employer. If you are a recent graduate, explain how your academic background makes you a qualified candidate for the position. If you have practical work experience, point out specific achievements or unique qualifications. Try not to repeat the same information the reader will find in the resume. Refer the reader to the enclosed resume or application which summarizes your qualifications, training, and experiences. The purpose of this section is to strengthen your resume by providing details which bring your experiences to life.
+\coverletterbody
 
-PARAGRAPH THREE: Request a personal interview and indicate your flexibility as to the time and place. Repeat your phone number in the letter and offer assistance to help in a speedy response. For example, state that you will be in the city where the company is located on a certain date and would like to set up an interview. Alternatively, state that you will call on a certain date to set up an interview. End the letter by thanking the employer for taking time to consider your credentials.
+\coverletterclosing
 
 \smallskip % Vertical whitespace
 
@@ -120,7 +122,7 @@ Sincerely yours,
 
 \bigskip\bigskip\bigskip % Vertical whitespace
 
-Dr. John Dorian, M.D.
+\coverlettersignature
 
 %----------------------------------------------------------------------------------------
 

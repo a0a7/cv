@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Convert YAML CV data to LaTeX commands
-Usage: python yaml_to_latex.py ../../data.yaml [cv|cover-letter]
+Usage: python yaml_to_latex.py data.yaml [cv|cover-letter]
 """
 
 import yaml

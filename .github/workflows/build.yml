@@ -20,7 +20,9 @@ jobs:
       - name: Generate LaTeX data from YAML
         run: |
           cd ./src/cv
-          python yaml_to_latex.py data.yaml > cvdata.tex
+          python yaml_to_latex.py ../../data.yaml cv > cvdata.tex
+          cd ../cover-letter
+          python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3

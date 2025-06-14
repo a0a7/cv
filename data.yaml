@@ -23,6 +23,28 @@ personal:
       url: "https://orcid.org/0009-0008-5679-3042"
       raise: "-0.1em"
 
+cover_letter:
+  recipient:
+    name: "Dr. Robert Kelso"
+    title: "Chief of Medicine"
+    organization: "Sacred Heart Hospital"
+    address: |
+      12629 Riverside Drive
+      North Hollywood, L.A. 91607
+  
+  subject: "Cover Letter for Residency Position"
+  
+  greeting: "Dear Dr. Kelso,"
+  
+  content:
+    opening: "I am writing to express my strong interest in the electrical engineering position at your organization. As a dedicated electrical engineering student at the University of Minnesota with a passion for research and innovation, I am excited about the opportunity to contribute to your team's groundbreaking work."
+    
+    body: "My academic background and research experience make me a strong candidate for this position. Through my work as an Independent Research Lead at Minnetonka Research, I have developed expertise in machine learning applications, successfully leading a yearlong project developing a model for reading Gregg shorthand. This experience, combined with my international research internship at KTH Royal Institute of Technology in Stockholm, has given me a unique perspective on collaborative research and the ability to work effectively in diverse, technical environments. My published research and model repository demonstrate my commitment to producing tangible, impactful results."
+    
+    closing: "I would welcome the opportunity to discuss how my research background, technical skills, and passion for innovation can contribute to your organization's success. I am flexible with interview scheduling and can be reached at the contact information provided above. Thank you for your time and consideration of my application."
+  
+  signature: "Alexander Weimer"
+
 experience:
   - title: "Independent Research Lead"
     organization: "Minnetonka Research"
