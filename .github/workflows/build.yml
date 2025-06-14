@@ -41,8 +41,7 @@ jobs:
           ls -la
           python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
           echo "Cover letter data generated, checking coverletterdata.tex:"
-          ls -la coverletterdata.tex
-          head -5 coverletterdata.tex
+          ls -la coverletterdata.tex          head -5 coverletterdata.tex
           cd ../../
           
           echo "Final check - listing all generated files:"
@@ -51,17 +50,27 @@ jobs:
           echo "Cover letter directory:"
           ls -la ./src/cover-letter/coverletterdata.tex
       
-      - name: Compile LaTeX document
+      - name: Compile CV LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            ./src/cv/main.tex
-            ./src/cover-letter/main.tex
+          root_file: main.tex
+          working_directory: ./src/cv/
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_fonts: |
-            ./static/font/*.ttf
-            ./static/font/*.otf
+            ../../static/font/*.ttf
+            ../../static/font/*.otf
+      
+      - name: Compile Cover Letter LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: ./src/cover-letter/
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          extra_fonts: |
+            ../../static/font/*.ttf
+            ../../static/font/*.otf
       
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
