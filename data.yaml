@@ -53,7 +53,7 @@ experience:
     duration: "Sep 2024--Jun 2025"
     items:
       - "Led a yearlong project developing a machine learning model for reading Gregg shorthand."
-      - "Article: \\textbf{\\href{https://doi.org/10.31224/4661}{doi.org/10.31224/4661}}, Model Repository: \\textbf{\\href{https://doi.org/10.57967/hf/5604}{doi.org/10.57967/hf/5604}}"
+      - "Preprint: \\textbf{\\href{https://doi.org/10.31224/4661}{doi.org/10.31224/4661}}, Model Repository: \\textbf{\\href{https://doi.org/10.57967/hf/5604}{doi.org/10.57967/hf/5604}}"
   - title: "Research Intern"
     organization: "KTH Royal Institute of Technology"
     organization_url: "https://www.linkedin.com/school/kth/"
@@ -84,7 +84,7 @@ volunteering:
     organization: "Minnetonka Community Education"
     organization_url: "https://www.linkedin.com/company/107129508/admin/dashboard/"
     location: "Minnetonka, MN"
-    duration: "Jun 2021--"
+    duration: "Jun 2021, August 2023--Present"
     items:
       - "Taught middle school speech/debate camps for several years. Counselor at science camp."
 
