@@ -1,4 +1,5 @@
-# LaTeX résumé/cover letter [![Build LaTeX document](https://github.com/a0a7/cv/actions/workflows/build.yml/badge.svg)](https://github.com/a0a7/cv/actions/workflows/build.yml)
+# LaTeX résumé/cover letter [![Build LaTeX document](https://github.com/a0a7/cv/actions/workflows/build.yml/badge.svg)](https://github.com/a0a7/cv/actions/workflows/build.yml) [![Static Badge](https://img.shields.io/badge/cv%20link-%23121?logo=github&link=https%3A%2F%2Fa0a7.github.io%2Fcv%2Fcv.pdf)](https://a0a7.github.io/cv/cv.pdf) [![Static Badge](https://img.shields.io/badge/cover%20letter%20link-%23121?logo=github&link=https%3A%2F%2Fa0a7.github.io%2Fcv%2Fcv.pdf)](https://a0a7.github.io/cv/cover-letter.pdf)
+
 
 <img src="https://github.com/user-attachments/assets/87851762-c551-457f-a739-e0a60051c854" width="49%"/> <img src="https://github.com/user-attachments/assets/aa4ce13e-ebf7-45c3-8318-5424fd9b3771" width="49.1%"/>
 
