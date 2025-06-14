@@ -34,11 +34,11 @@ jobs:
           ls -la cvdata.tex
           head -5 cvdata.tex
           cd ../../
-          
-          echo "Generating cover letter data..."
+            echo "Generating cover letter data..."
           cd ./src/cover-letter
           echo "In cover letter directory: $(pwd)"
-          ls -la          python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
+          ls -la
+          python yaml_to_latex.py ../../data.yaml cover-letter > coverletterdata.tex
           echo "Cover letter data generated, checking coverletterdata.tex:"
           ls -la coverletterdata.tex
           head -5 coverletterdata.tex
