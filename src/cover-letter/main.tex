@@ -5,6 +5,7 @@
 \usepackage{graphicx} % Required for including images
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{fontspec}
 
 % Load cover letter data
 \input{coverletterdata.tex}
@@ -46,23 +47,18 @@
 
 % Remove page numbers
 \pagestyle{empty}
-
+\newfontfamily\titlefont{MontserratExtrabold}[
+    Path = ../../static/font/,
+    Extension = .otf
+]
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-%	FIRST PAGE HEADER
-%----------------------------------------------------------------------------------------
-
-\vspace*{-1.25cm} % Pull logo into the top margin
-
 \begin{center}
+\color{black}\huge{\titlefont\textbf{\cvname}} \\
 \vspace{0.5em}
-\color{black}\LARGE{\textbf{\cvname}} \\
-\vspace{0.3em}
 \small{\cvtitle} \\
-\vspace{0.3em}
+\vspace{1.25em}
 
 % LINKS ON ONE ROW
 \small{\textbf{
