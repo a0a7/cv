@@ -57,9 +57,7 @@ jobs:
           working_directory: ./src/cv/
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
-          extra_fonts: |
-            ../../static/font/*.ttf
-            ../../static/font/*.otf
+          extra_fonts: ../../static/font/*.otf
       
       - name: Compile Cover Letter LaTeX document
         uses: xu-cheng/latex-action@v3
@@ -68,9 +66,7 @@ jobs:
           working_directory: ./src/cover-letter/
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
-          extra_fonts: |
-            ../../static/font/*.ttf
-            ../../static/font/*.otf
+          extra_fonts: ../../static/font/*.otf
       
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
