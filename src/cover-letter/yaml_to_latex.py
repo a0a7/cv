@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Convert YAML CV data to LaTeX commands
-Usage: python yaml_to_latex.py data.yaml [cv|cover-letter]
+Usage: python yaml_to_latex.py ../../data.yaml [cv|cover-letter]
 """
 
 import yaml
@@ -131,8 +131,7 @@ def generate_latex_commands(data):
         commands.append(f"\\newcommand{{\\skills{num}category}}{{{escape_latex(skill['category'])}}}")
         commands.append(f"\\newcommand{{\\skills{num}items}}{{{skill['items']}}}")
         commands.append("")
-    
-    # Languages
+      # Languages
     commands.append("% Languages")
     commands.append(f"\\newcommand{{\\languagescount}}{{{len(data['languages'])}}}")
     commands.append("")
@@ -144,7 +143,7 @@ def generate_latex_commands(data):
         if i < len(data['languages']):
             commands.append("")
     
-    return '\\n'.join(commands)
+    return '\n'.join(commands)
 
 def generate_cover_letter_commands(data):
     """Generate LaTeX commands for cover letter from YAML data"""
@@ -189,11 +188,10 @@ def generate_cover_letter_commands(data):
         commands.append(f"\\newcommand{{\\coverletterbody}}{{{escape_latex(cl['content']['body'])}}}")
         commands.append(f"\\newcommand{{\\coverletterclosing}}{{{escape_latex(cl['content']['closing'])}}}")
         commands.append("")
-        
-        # Signature
+          # Signature
         commands.append(f"\\newcommand{{\\coverlettersignature}}{{{escape_latex(cl['signature'])}}}")
     
-    return '\\n'.join(commands)
+    return '\n'.join(commands)
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 3:
