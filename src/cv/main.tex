@@ -8,6 +8,12 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{fontspec}
+
+\newfontfamily\titlefont{MontserratExtrabold}[
+    Path = ../../static/font/,
+    Extension = .otf
+]
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -45,14 +51,14 @@
 \vspace{2em}
 \begin{center}
 \vspace{2em}
-\color{black}\LARGE{\textbf{Alexander Weimer}} \\
+\color{black}\huge{\titlefont\textbf{Alexander Weimer}} \\
 \vspace{0.4em}
 \small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
 \vspace{0.5em}
 
 % LINKS ON ONE ROW
 \small{\textbf{
-  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email}}~aw@a0.ax
+  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email.png}}~aw@a0.ax
   \quad
   \href{https://a0.ax/}{\raisebox{-0.4ex}{\includegraphics[width=1em]{../../static/icon/web}}~www.a0.ax}
   \quad
