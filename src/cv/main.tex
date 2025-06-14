@@ -1,47 +1,58 @@
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{russell}
+\documentclass[11pt, letterpaper]{article}
+\usepackage[left=1.4cm, top=1.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\renewcommand{\familydefault}{\sfdefault}
 
-% Specify the location of the included fonts
-\fontdir[../../static/font/]
+\definecolor{darkslate}{RGB}{10,18,18}
 
-% Color for highlights
-% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
-%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
-\colorlet{russell}{russell-black}
-% Uncomment if you would like to specify your own color
-% \definecolor{russell}{HTML}{CA63A8}
+% Hide link boxes
+\hypersetup{
+    hidelinks,
+    colorlinks=false,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor
+    sectioncolor=darkslate
+}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+% Section formatting - line at the same level as the text
+\newcommand{\sectionline}[1]{%
+  \noindent\bfseries\color{black}#1\hspace{0.5em}\leaders\hrule height 0.4pt\hfill\kern0pt%
+  \vspace{0.5em}%
+}
+\titleformat{\section}{\normalfont}{}{0em}{\sectionline}
+\titlespacing*{\section}{0pt}{20pt}{0pt}
 
-% Set false if you don't want to highlight section with russell color
-\setbool{acvSectionColorHighlight}{true}
+% Set default text color
+\color{darkslate}
 
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+% Remove default list spacing
+\setlist{nosep, leftmargin=15pt}
+
+% Remove page numbers
+\pagestyle{empty}
 
 %-------------------------------------------------------------------------------
 \begin{document}
-
+\vspace{2em}
 \begin{center}
-\Large{\textbf{Alexander Weimer}} \\
-\vspace{0.5em}
+\vspace{2em}
+\color{black}\LARGE{\textbf{Alexander Weimer}} \\
+\vspace{0.4em}
 \small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
-\vspace{0.8em}
+\vspace{0.5em}
 
 % LINKS ON ONE ROW
-\small{
-  \raisebox{-0.1ex}{\includegraphics[width=1em]{../../static/icon/email}}~aw@a0.ax
+\small{\textbf{
+  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email}}~aw@a0.ax
   \quad
   \href{https://a0.ax/}{\raisebox{-0.4ex}{\includegraphics[width=1em]{../../static/icon/web}}~www.a0.ax}
   \quad
@@ -50,19 +61,83 @@
   \href{https://linkedin.com/in/alexander-weimer}{\raisebox{-0.2em}{\includegraphics[width=1em]{../../static/icon/linkedin}}~in/alexander-weimer}
   \quad
   \href{https://orcid.org/0009-0008-5679-3042}{\raisebox{-0.1em}{\includegraphics[width=1em]{../../static/icon/orcid}}~0009-0008-5679-3042}
-}
+}}
 
-\vspace{0.8em}
 \end{center}
 
-    \input{experience.tex}
-    \input{education.tex}
-    \input{volunteering.tex}
-    \input{achievements.tex}
-    \input{skills.tex}
-    \input{languages.tex}
+\vspace{-1.5em}
+\section{\Large{Experience}}
 
-  %\input{cv/activities.tex}
+\noindent\textbf{{Independent Research Lead}} \hfill \textit{Minnetonka, MN}\\
+\href{https://www.linkedin.com/school/minnetonka-research/}{Minnetonka Research} \hfill \textit{Sep 2024--Jun 2025}
+\begin{itemize}
+\item Led a yearlong project developing a machine learning model for reading Gregg shorthand.
+\item Article: \textbf{\href{https://doi.org/10.31224/4661}{doi.org/10.31224/4661}}, Model Repository: \textbf{\href{https://doi.org/10.57967/hf/5604}{doi.org/10.57967/hf/5604}}
+\end{itemize}
+
+\vspace{0.5em}
+
+\noindent\textbf{{Research Intern}} \hfill \textit{Stockholm, Sweden}\\
+\href{https://www.linkedin.com/school/kth/}{KTH Royal Institute of Technology} \hfill \textit{Jun 2023--Jul 2023}
+\begin{itemize}
+\item Led a project in Materials Engineering under the mentorship of Dr.\ Antonio Capezza.
+\item Presented a talk about my research at the Swedish National Museum of Science and Technology.
+\end{itemize}
+
+\vspace{-1em}
+\section{\Large{Education}}
+
+\noindent\textbf{{\href{https://www.linkedin.com/school/university-of-minnesota/}{University of Minnesota}}} \hfill \textit{Minneapolis, Minnesota}\\
+Bachelors of Electrical Engineering \hfill \textit{2025--2028 (est.)}
+%\begin{itemize}
+%\item Activities: 
+%\end{itemize}
+
+\vspace{0.5em}
+
+\noindent\textbf{{\href{https://www.linkedin.com/school/minnetonka-senior-high-school/}{Minnetonka High School}}} \hfill \textit{Minnetonka, Minnesota}\\
+AP International Diploma | Dual Enrollment @ SCSU \& Normandale Community College \hfill \textit{2021--2025}
+\begin{itemize}
+\item GPA\@: 4.4 Weighted / 3.8 Unweighted
+\item Activities: Speech \& Debate (Captain), Minnetonka Research, Cultural Fair, $\Delta E\Phi$
+\end{itemize}
+
+\vspace{-1em}
+\section{\Large{Volunteering}}
+
+\noindent\textbf{{Camp Lecturer, Counselor}} \hfill \textit{Minnetonka, MN}\\
+\href{https://www.linkedin.com/company/107129508/admin/dashboard/}{Minnetonka Community Education} \hfill \textit{Jun 2021--}
+\begin{itemize}
+\item Taught middle school speech/debate camps for several years. Counselor at science camp.
+\end{itemize}
+
+\vspace{-1em}
+\section{\Large{Honors/Awards}}
+
+\textbf{Category 1st Place---Robotics \& Intelligent Machines (ISEF 2nd Alternate)}, TCRSF \hfill \textbf{Mar 2025}\\
+\textbf{National Merit Scholar}, National Merit Scholarship Program \hfill \textbf{Apr 2025}\\
+\textbf{Degree of Special Distinction}, National Speech \& Debate Honor Society \hfill \textbf{Nov 2024}\\
+\textbf{AP International Diploma}, College Board \hfill \textbf{Jul 2024}\\
+\textbf{National German Exam Level 4 Gold award (91st percentile)}, AATG \hfill \textbf{Mar 2024}\\
+\textbf{Minnesota Platinum Bilingual Seal (German \& English)}, Minnesota Dept.\ of Education \hfill \textbf{Feb 2024}
+
+\vspace{-1em}
+\section{\Large{Skills}}
+
+\begin{tabular}{@{}p{2cm}p{15cm}@{}}
+\textbf{Languages} & Javascript/Typescript, React, Python, Java, Matlab\\
+\textbf{Tooling} & Solidworks, Git, \LaTeX, Linux, Shell (Bash, Zsh)\\
+\textbf{Soft Skills} & Collaborative software development, public speaking, academic/professional writing
+\end{tabular}
+
+\vspace{-1em}
+\section{\Large{Languages}}
+
+\begin{tabular}{@{}p{2cm}p{15CM}@{}}
+\textbf{Swedish} & Native proficiency\\
+\textbf{English} & Native proficiency\\
+\textbf{German} & Professional working proficiency
+\end{tabular}
 
 \vspace*{\fill}
 %-------------------------------------------------------------------------------
