@@ -92,24 +92,7 @@ jobs:
           cp ./src/cover-letter/main.pdf ./public/cover-letter.pdf
           echo "Files prepared for GitHub Pages:"
           ls -la ./public/
-      
-      - name: Update README with PDF links
-        run: |
-          # Get the repository owner and name
-          REPO_OWNER="${GITHUB_REPOSITORY%/*}"
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          
-          # Define the URLs for the hosted PDFs
-          CV_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}/cv.pdf"
-          COVER_LETTER_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}/cover-letter.pdf"
-          
-          # Update README with the PDF links
-          sed -i "s|## Usage|## Downloads\n\n📄 **[Download CV (PDF)](${CV_URL})**\n\n📄 **[Download Cover Letter (PDF)](${COVER_LETTER_URL})**\n\n## Usage|" README.md
-          
-          echo "Updated README with PDF links:"
-          echo "CV URL: ${CV_URL}"
-          echo "Cover Letter URL: ${COVER_LETTER_URL}"
-      
+            
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
