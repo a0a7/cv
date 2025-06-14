@@ -8,3 +8,8 @@ src/cv/main.aux
 src/cv/main.fdb_latexmk
 src/cv/main.log
 src/cv/main.fls
+src/cover-letter/main.xdv
+src/cv/main.out
+src/cv/main.synctex.gz
+src/cv/main.xdv
+src/cover-letter/main.out

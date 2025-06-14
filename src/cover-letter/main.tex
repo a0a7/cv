@@ -3,54 +3,46 @@
 ]{letter}
 
 \usepackage{graphicx} % Required for including images
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
 
 \usepackage[
-	a4paper, % Paper size, use letterpaper for US letter paper
-	top=2cm, % Top margin
-	bottom=2.5cm, % Bottom margin
-	left=3cm, % Left margin
-	right=3cm, % Right margin
-	headsep=0.8cm, % Space from the top margin to the baseline of the header
-	footskip=1.2cm, % Space from the bottom margin to the baseline of the footer
+	letterpaper, % Paper size, use letterpaper for US letter paper
+	top=1.8 % Top margin
+	bottom=1.8cm, % Bottom margin
+	left=2.4cm, % Left margin
+	right=2.4cm, % Right margin
+	headsep=0cm, % Space from the top margin to the baseline of the header
+	footskip=0cm, % Space from the bottom margin to the baseline of the footer
 	%showframe % Uncomment to show frames around the margins for debugging purposes
 ]{geometry}
 
 \setlength{\parindent}{0pt} % Paragraph indentation
 \setlength{\parskip}{1em} % Vertical space between paragraphs
 
-%----------------------------------------------------------------------------------------
-%	FONTS
-%----------------------------------------------------------------------------------------
+% Use CMU Sans font (Computer Modern Sans)
+\renewcommand{\familydefault}{\sfdefault}
 
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\definecolor{darkslate}{RGB}{10,18,18}
 
-\usepackage{XCharter} % Use the XCharter fonts
-
-%----------------------------------------------------------------------------------------
-%	HEADERS AND FOOTERS
-%----------------------------------------------------------------------------------------
-
-\usepackage{fancyhdr} % Required for customizing headers and footers
-
-\fancypagestyle{firstpage}{%
-	\fancyhf{} % Clear default headers/footers
-	\renewcommand{\headrulewidth}{0pt} % No header rule
-	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+% Hide link boxes
+\hypersetup{
+    hidelinks,
+    colorlinks=false,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor
 }
 
-\fancypagestyle{subsequentpages}{%
-	\fancyhf{} % Clear default headers/footers
-	\renewcommand{\headrulewidth}{1pt} % Header rule thickness
-	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
-}
+% Set default text color
+\color{darkslate}
 
-\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
-\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+% Remove page numbers
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 
@@ -62,29 +54,32 @@
 
 \vspace*{-1.25cm} % Pull logo into the top margin
 
-% \hfill\includegraphics[width=0.3\textwidth]{logo.pdf} % Right-aligned logo
+\begin{center}
+\vspace{0.5em}
+\color{black}\LARGE{\textbf{Alexander Weimer}} \\
+\vspace{0.3em}
+\small{Electrical Engineering Student at University of Minnesota, Minnesota, USA} \\
+\vspace{0.3em}
 
-\vspace{-0.5cm} % Pull the rule closer to the logo
+% LINKS ON ONE ROW
+\small{\textbf{
+  \raisebox{-0.45ex}{\includegraphics[width=1em]{../../static/icon/email}}~aw@a0.ax
+  \quad
+  \href{https://a0.ax/}{\raisebox{-0.4ex}{\includegraphics[width=1em]{../../static/icon/web}}~www.a0.ax}
+  \quad
+  \href{https://github.com/a0a7}{\raisebox{-0.5ex}{\includegraphics[width=1em]{../../static/icon/github}}~@a0a7}
+  \quad
+  \href{https://linkedin.com/in/alexander-weimer}{\raisebox{-0.2em}{\includegraphics[width=1em]{../../static/icon/linkedin}}~in/alexander-weimer}
+  \quad
+  \href{https://orcid.org/0009-0008-5679-3042}{\raisebox{-0.1em}{\includegraphics[width=1em]{../../static/icon/orcid}}~0009-0008-5679-3042}
+}}
+\end{center}
+
+\vspace{0.3cm} % Pull the rule closer to the logo
 
 \rule{\linewidth}{1pt} % Horizontal rule
 
 \medskip % Vertical whitespace
-
-%----------------------------------------------------------------------------------------
-%	YOUR NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begingroup
-	\raggedleft % Right align text
-	\small % Font size
-	Dr. John Dorian \\ % Your name
-	5384 N Broadway Ave \\ % Your address
-	Trotwood, Ohio 45426 \\
-	+1 (937) 837-1234 \\ % Your phone number
-	john@latextemplates.com\\ % Your email address
-	\bigskip % Vertical whitespace
-	{\normalsize\textit{\today}}\\ % Date
-\endgroup
 
 %----------------------------------------------------------------------------------------
 %	ADDRESSEE AND GREETING
