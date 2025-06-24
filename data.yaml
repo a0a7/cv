@@ -25,16 +25,16 @@ personal:
 
 cover_letter:
   recipient:
-    name: "Dr. Robert Kelso"
-    title: "Chief of Medicine"
-    organization: "Sacred Heart Hospital"
+    name: "Dr. John Doe"
+    title: "Top Guy"
+    organization: "Org"
     address: |
-      12629 Riverside Drive
-      North Hollywood, L.A. 91607
+      123 abc xyz
+      abc, xyz 12345
   
-  subject: "Cover Letter for Residency Position"
+  subject: "Cover Letter for ABC Position"
   
-  greeting: "Dear Dr. Kelso,"
+  greeting: "Dear Dr. XYZ,"
   
   content:
     opening: "I am writing to express my strong interest in the electrical engineering position at your organization. As a dedicated electrical engineering student at the University of Minnesota with a passion for research and innovation, I am excited about the opportunity to contribute to your team's groundbreaking work."
@@ -46,7 +46,7 @@ cover_letter:
   signature: "Alexander Weimer"
 
 experience:
-  - title: "Independent Research Lead"
+  - title: "Research Lead"
     organization: "Minnetonka Research"
     organization_url: "https://www.linkedin.com/school/minnetonka-research/"
     location: "Minnetonka, MN"
@@ -86,7 +86,7 @@ volunteering:
     location: "Minnetonka, MN"
     duration: "Jun 2021, August 2023--Present"
     items:
-      - "Taught middle school speech/debate camps for several years. Counselor at science camp."
+      - "Taught middle school speech/debate camps for several years. Counselor at science camp."  
 
 honors:
   - title: "Category 1st Place---Robotics & Intelligent Machines (ISEF 2nd Alternate)"
