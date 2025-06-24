@@ -4,11 +4,11 @@ This repo contains the source for my CV and cover letter. It builds and hosts th
 
 <img src="https://github.com/user-attachments/assets/87851762-c551-457f-a739-e0a60051c854" width="49%"/> <img src="https://github.com/user-attachments/assets/aa4ce13e-ebf7-45c3-8318-5424fd9b3771" width="49.1%"/>
 
-## Usage
+## Usage 
 
 ### Local Development
 
-1. **Edit Content**: Update `data.yaml` with your information
+1. **Edit Content**: Update `data.yaml` with information. Link to edit online: https://github.com/a0a7/cv/edit/main/data.yaml
 2. **Generate LaTeX Commands**:
    ```bash
    # For CV
