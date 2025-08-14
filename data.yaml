@@ -46,7 +46,7 @@ cover_letter:
   signature: "Alexander Weimer"
 
 experience:
-  - title: "Research Lead"
+  - title: "Affiliated Researcher"
     organization: "Minnetonka Research"
     organization_url: "https://www.linkedin.com/school/minnetonka-research/"
     location: "Minnetonka, MN"
@@ -61,12 +61,12 @@ experience:
     duration: "Jun 2023--Jul 2023"
     items:
       - "Led a project in Materials Engineering under the mentorship of Dr.\\ Antonio Capezza."
-      - "Presented a talk about my research at the Swedish National Museum of Science and Technology."
+      - "Presented \\textbf{\\href{https://www.youtube.com/watch?v=E9FkcJHF1pk}{a talk about my research}} at the Swedish National Museum of Science and Technology."
 
 education:
   - institution: "University of Minnesota"
     institution_url: "https://www.linkedin.com/school/university-of-minnesota/"
-    degree: "Bachelors of Electrical Engineering"
+    degree: "Bachelors of Electrical Engineering, Minors in Math \& German"
     location: "Minneapolis, Minnesota"
     duration: "2025--2028 (est.)"
     items: []
@@ -82,11 +82,11 @@ education:
 volunteering:
   - title: "Camp Lecturer, Counselor"
     organization: "Minnetonka Community Education"
-    organization_url: "https://www.linkedin.com/company/107129508/admin/dashboard/"
+    organization_url: "https://www.linkedin.com/company/107129508/"
     location: "Minnetonka, MN"
-    duration: "Jun 2021, August 2023--Present"
+    duration: "Jun 2021--Aug 2025"
     items:
-      - "Taught middle school speech/debate camps for several years. Counselor at science camp."  
+      - "Taught middle school speech/debate camps for several years. Counselor at Camp Invention."  
 
 honors:
   - title: "Category 1st Place---Robotics & Intelligent Machines (ISEF 2nd Alternate)"
@@ -110,16 +110,16 @@ honors:
 
 skills:
   - category: "Languages"
-    items: "Javascript/Typescript, React, Python, Java, Matlab"
+    items: "Javascript/Typescript, Svelte, Python, Java, Matlab"
   - category: "Tooling"
-    items: "Solidworks, Git, \\LaTeX, Linux, Shell (Bash, Zsh)"
+    items: "Git, \\LaTeX, Linux, Shell (Bash, Zsh)"
   - category: "Soft Skills"
-    items: "Collaborative software development, public speaking, academic/professional writing"
+    items: "Collaborative development, public speaking, academic/professional writing"
 
 languages:
-  - language: "Swedish"
-    proficiency: "Native proficiency"
   - language: "English"
+    proficiency: "Native proficiency"
+  - language: "Swedish"
     proficiency: "Native proficiency"
   - language: "German"
     proficiency: "Professional working proficiency"
