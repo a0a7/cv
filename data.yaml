@@ -1,6 +1,6 @@
 personal:
   name: "Alexander Weimer"
-  title: "Electrical Engineering Student at University of Minnesota, Minnesota, USA"
+  title: "Honors Electrical Engineering Student at University of Minnesota, Minnesota, USA"
   contacts:
     - icon: "email.png"
       text: "a0@ieee.org"
@@ -46,7 +46,15 @@ cover_letter:
   signature: "Alexander Weimer"
 
 experience:
-  - title: "Affiliated Researcher"
+  - title: "Co-founder/Lead Developer"
+    organization: "Aes Efficio"
+    organization_url: "https://www.linkedin.com/company/99153631"
+    location: "Stockholm, Sweden / Remote"
+    duration: "Aug 2023-- "
+    items:
+      - "Led small team creating video game add-ons. Personally drove 34m downloads, several partnership deals, 6-figure revenue"
+
+  - title: "Student Researcher"
     organization: "Minnetonka Research"
     organization_url: "https://www.linkedin.com/school/minnetonka-research/"
     location: "Minnetonka, MN"
@@ -66,10 +74,12 @@ experience:
 education:
   - institution: "University of Minnesota"
     institution_url: "https://www.linkedin.com/school/university-of-minnesota/"
-    degree: "Bachelors of Electrical Engineering, Minors in Math, German"
+    degree: "Bachelors of Electrical Engineering, Minor in German"
     location: "Minneapolis, Minnesota"
-    duration: "2025--2028 (est.)"
-    items: []
+    duration: "2025--2027 (est.)"
+    items:
+      - "GPA\\@: 3.6"
+      - "Founder - OWASP UMN Chapter, Science & Engineering Student Board, Climbing, ΤΒΠ Engineering Honor Society, ΔΦΑ Honor Society"
   - institution: "Minnetonka High School"
     institution_url: "https://www.linkedin.com/school/minnetonka-senior-high-school/"
     degree: "AP International Diploma | Dual Enrollment @ SCSU & Normandale Community College"
@@ -86,7 +96,7 @@ volunteering:
     location: "Minnetonka, MN"
     duration: "Jun 2021--Aug 2025"
     items:
-      - "Taught middle school speech/debate camps for several years. Counselor at Camp Invention."  
+      - "Taught two middle school speech/debate camps for several years. Counselor at Camp Invention."  
 
 honors:
   - title: "Category 1st Place---Robotics & Intelligent Machines (ISEF 2nd Alternate)"
@@ -104,9 +114,6 @@ honors:
   - title: "National German Exam Level 4 Gold award (91st percentile)"
     organization: "AATG"
     date: "Mar 2024"
-  - title: "Minnesota Platinum Bilingual Seal (German & English)"
-    organization: "Minnesota Dept.\\ of Education"
-    date: "Feb 2024"
 
 skills:
   - category: "Languages"
